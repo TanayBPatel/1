@@ -8,7 +8,7 @@ const LocationsList = () => {
   useEffect(() => {
     const fetchLocations = async () => {
       try {
-        const response = await fetch('http://localhost:4000'); // Adjust with your backend URL
+        const response = await fetch('https://backendkumbh.onrender.com/'); // Adjust with your backend URL
         if (response.ok) {
           const data = await response.json(); // Parse JSON response
           setLocations(data); // Store the data in the state

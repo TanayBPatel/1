@@ -44,7 +44,7 @@ const PostUserDataForm = () => {
     e.preventDefault(); // Prevent page reload
 
     try {
-      const response = await fetch('http://localhost:4000', {
+      const response = await fetch('https://backendkumbh.onrender.com/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
