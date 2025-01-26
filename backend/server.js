@@ -1,4 +1,6 @@
-const express= require('express');
+import express from 'express'
+app.use(express.json())
+
 const app= express();
 const __dirname = path.resolve();
 require('dotenv').config();
@@ -18,7 +20,6 @@ if (process.env.NODE_ENV === "production") {
 dbconnection();
 
 
-app.use(express.json())
 app.use(cors({ origin: '*' })); 
 app.get('/',asyncHandler(async(req,res)=>{
     const all = await Schema.find();
