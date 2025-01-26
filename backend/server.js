@@ -15,7 +15,12 @@ const port = 4000;
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: '*' }));
+app.use(
+    cors({
+      origin: "http://localhost:3000",
+      credentials: true,
+    })
+  );
 
 const __dirname = path.resolve();
 
