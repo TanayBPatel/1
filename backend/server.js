@@ -2,19 +2,19 @@ const express= require('express');
 const app= express();
 const __dirname = path.resolve();
 require('dotenv').config();
-const port =  process.env.PORT || 3001;
+const port =  4000;
 const dbconnection = require('./model/dbconnection')
 const Schema = require("./schema/dbschema.js");
 const asyncHandler = require("express-async-handler");
 const cors = require('cors');
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "../frontend/dist")));
+    app.use(express.static(path.join(__dirname, "../frontend/build")));
   
     app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+      res.sendFile(path.join(__dirname, "../frontend", "build", "index.html"));
     });
   }
-  
+
 dbconnection();
 
 
