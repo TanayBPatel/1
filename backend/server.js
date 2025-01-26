@@ -1,7 +1,7 @@
 import express from 'express'
-app.use(express.json())
 
 const app= express();
+app.use(express.json())
 const __dirname = path.resolve();
 require('dotenv').config();
 const port =  4000;
