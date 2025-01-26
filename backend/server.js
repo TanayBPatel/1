@@ -3,7 +3,9 @@ import path from 'path'
 const app= express();
 app.use(express.json())
 const __dirname = path.resolve();
-const dotenv = require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
+
 const port =  4000;
 const dbconnection = require('./model/dbconnection')
 const Schema = require("./schema/dbschema.js");
